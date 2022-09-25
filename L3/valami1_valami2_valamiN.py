@@ -1,0 +1,13 @@
+import sys
+
+def main():
+    inp = input("Do you really want to quit [y/Y/yes]? ")
+    if inp in ["y", "Y", "yes"]:
+        print("bye")
+        sys.exit(0)
+    print("The show goes on...")
+
+##################################################3
+
+if __name__ == "__main__":
+    main()

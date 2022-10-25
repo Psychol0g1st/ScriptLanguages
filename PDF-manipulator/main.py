@@ -1,49 +1,30 @@
-
-
-"""
-ZetCode PyQt6 tutorial
-
-This example shows a tooltip on
-a window and a button.
-
-Author: Jan Bodnar
-Website: zetcode.com
-"""
-
 import sys
-from PyQt6.QtWidgets import (QWidget, QToolTip,
-    QPushButton, QApplication)
-from PyQt6.QtGui import QFont
+from PyQt5.QtWidgets import (QMainWindow, QApplication)
+from PyQt5 import QtGui
 
-
-class Example(QWidget):
+class Window(QMainWindow):
 
     def __init__(self):
         super().__init__()
+        self.title = "PDF Manipulator"
+        self.top = 100
+        self.left = 100
+        self.width = 1024
+        self.height = 1024
+        self.setWindowIcon(QtGui.QIcon("./assets/icon.png"))
+        self.initWindow()
 
-        self.initUI()
 
-
-    def initUI(self):
-
-        QToolTip.setFont(QFont('SansSerif', 10))
-
-        self.setToolTip('This is a <b>QWidget</b> widget')
-
-        btn = QPushButton('Button', self)
-        btn.setToolTip('This is a <b>QPushButton</b> widget')
-        btn.resize(btn.sizeHint())
-        btn.move(50, 50)
-
-        self.setGeometry(300, 300, 300, 200)
-        self.setWindowTitle('Tooltips')
+    def initWindow(self):
+        self.setWindowTitle(self.title)
+        self.setGeometry(self.top, self.left, self.width, self.height)
         self.show()
 
 
 def main():
 
     app = QApplication(sys.argv)
-    ex = Example()
+    window = Window()
     sys.exit(app.exec())
 
 

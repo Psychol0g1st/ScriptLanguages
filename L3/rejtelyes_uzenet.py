@@ -1,14 +1,7 @@
 #!/usr/bin/env python3
 # encoding: utf-8
 
-from curses.ascii import isalnum
-from dataclasses import replace
-from operator import index, indexOf
 import string
-
-"""
-Edes
-"""
 
 CODE = """
 Cbcq Dgyk!

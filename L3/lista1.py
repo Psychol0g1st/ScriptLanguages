@@ -1,18 +1,6 @@
 #!/usr/bin/env python3
 # coding: utf-8
 
-# Copyright 2010 Google Inc.
-# Licensed under the Apache License, Version 2.0
-# http://www.apache.org/licenses/LICENSE-2.0
-
-# Google's Python Class
-# http://code.google.com/edu/languages/google-python-class/
-
-# A magyar változatot készítette:
-# Szathmáry László (jabba.laci@gmail.com)
-# frissítés Python 3-ra: 2016.09.09.
-
-
 # A. match_ends
 # Bemenet: sztringek listája. Számoljuk meg, hogy a bemenetben
 # hány olyan sztring van, melynek a hossza legalább 2 s az

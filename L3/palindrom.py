@@ -16,18 +16,23 @@ def is_palindrome_iterative(s):
     return True
 
 def is_palindrome_recursive(s):
+    s = s.replace(" ", "").lower()
     if len(s) == 0 or len(s) == 1:
         return True
     return s[0] == s[-1] and is_palindrome_recursive(s[1:-1])
     
 def main():
-    s = "indul a gorog aludni"
-    s = s.replace(" ", "").lower()
-    print(is_palindrome(s)) 
-    print(is_palindrome_iterative(s)) 
-    print(is_palindrome_recursive(s)) 
+    print("""
+        Palindrom-e 3 módszerrel:
+        1. Megfordítás szeleteléssel
+        2. Iteratív
+        3. Rekruzív
+    """)
+    s = input("Ajd meg szoveget: ")
+    print("Palindrom" if is_palindrome(s) else "Nem palindrom") 
+    print("Palindrom" if is_palindrome_iterative(s) else "Nem palindrom") 
+    print("Palindrom" if is_palindrome_recursive(s) else "Nem palindrom") 
 
-    print(s)
 
 if(__name__ == "__main__"):
     main()

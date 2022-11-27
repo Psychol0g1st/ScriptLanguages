@@ -43,12 +43,8 @@ def print_clock(time_str):
 
 
 def hide_cursor():
-    if os.name == "nt":
-        from ._winconsole import hide_cursor
-        hide_cursor()
-    else:
-        sys.stdout.write("\033[?25l")
-        sys.stdout.flush() 
+    sys.stdout.write("\033[?25l")
+    sys.stdout.flush() 
 
 
 

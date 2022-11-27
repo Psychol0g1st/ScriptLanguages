@@ -1,5 +1,6 @@
-#!/usr/bin/env python3
-# encoding: utf-8
+
+import time
+
 pwr = [0] * 10
 
 def isMunchausen(number):
@@ -20,7 +21,9 @@ def print_all_munchausen_numbers(limit):
             print(i)
 
 def main():
+    start_time = time.time()
     print_all_munchausen_numbers(440_000_000)
+    print("--- %s seconds ---" % (time.time() - start_time))
 
 if(__name__ == "__main__"):
     main()

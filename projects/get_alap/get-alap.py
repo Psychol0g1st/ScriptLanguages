@@ -96,7 +96,7 @@ def main():
             filename = Languages[language]["defaultFileName"] + Languages[language]["extension"]
             if generate_file(template, filename):
                 clear_screen()
-                print("File generated successfuly!")
+                print(f"{filename} generated successfuly!")
             else:
                 print_error("File already exist.")
     else:
